@@ -171,8 +171,8 @@ export const i18n: Record<Lang, Translation> = {
     exp: {
       title: 'Professional Journey', subtitle: 'Work & Enterprise Experience',
       items: [
-        { role: 'Systems & Networks Engineer', comp: 'Large-Scale Enterprise Infrastructure', date: '2024 - Present', desc: 'Managing, securing, and optimizing critical IT infrastructure and network architecture for a major national enterprise.', tags: ['Systems Admin', 'Networks', 'IT Infrastructure', 'Security'] },
-        { role: 'Frontend / Fullstack Web Developer & Designer', comp: 'Koudri Innovations Group (KIG)', date: 'June 2024 - Present', desc: 'Designing and building high-performance web platforms, UI/UX design systems, corporate visual assets, and fullstack application features.', tags: ['React', 'TypeScript', 'Node.js', 'UI/UX'] },
+        { role: 'Systems & Networks Engineer', comp: 'Large-Scale Enterprise Infrastructure', date: 'September 2025 - Present', desc: 'Managing, securing, and optimizing critical IT infrastructure and network architecture for a major national enterprise.', tags: ['Systems Admin', 'Networks', 'IT Infrastructure', 'Security'] },
+        { role: 'Frontend / Fullstack Web Developer & Designer (Part-Time)', comp: 'Koudri Innovations Group (KIG)', date: 'June 2024 - Present', desc: 'Designing and building high-performance web platforms, UI/UX design systems, corporate visual assets, and fullstack application features on a part-time basis.', tags: ['React', 'TypeScript', 'Node.js', 'UI/UX'] },
         { role: 'Freelance Fullstack Developer & Graphic Designer', comp: 'Mostaql & Independent Clients', date: '2022 - Present', desc: 'Delivering end-to-end client solutions: web apps, mobile interfaces, social media visual campaigns, and brand identity design.', tags: ['React Native', 'Figma', 'Express', 'MongoDB'] },
         { role: 'Fullstack Web Contributor (Image Time App)', comp: 'Hsoub Academy', date: 'Nov 2023 - Dec 2023', desc: 'Architected and built interactive features for image processing and web application management.', tags: ['React.js', 'Node.js', 'REST APIs'] },
       ],
@@ -181,7 +181,7 @@ export const i18n: Record<Lang, Translation> = {
       title: 'Academic & Research', subtitle: 'PhD & Academic Excellence',
       phdTitle: 'PhD Candidate in Artificial Intelligence',
       phdMeta: 'Software Engineering Department | Admitted via Competitive Exam',
-      phdDesc: 'Research focused on AI-assisted decision-making and analyzing student engagement patterns to improve first-year success rates in higher education.',
+      phdDesc: 'Exploring the synergy between artificial intelligence and critical decision-making through advanced software and algorithmic architectures.',
       deg: [
         { t: "Master's Degree - Advanced IS Engineering", i: 'Hassiba Ben Bouali University', d: 'June 2023', h: 'Graduated with Distinction' },
         { t: "Bachelor's Degree - Information Systems", i: 'Hassiba Ben Bouali University', d: 'Sept 2021' },
@@ -214,20 +214,20 @@ export const i18n: Record<Lang, Translation> = {
       ],
     },
     skills: {
-      title: 'Technical Stack', subtitle: 'Skills & Certifications',
-      cats: [
-        { n: 'Front-End', i: 'code', l: ['React.js', 'TypeScript', 'HTML5', 'CSS3', 'Tailwind CSS'] },
-        { n: 'Back-End', i: 'server', l: ['Node.js', 'Express.js', 'REST APIs', 'JWT Auth'] },
-        { n: 'Data & Real-time', i: 'database', l: ['PostgreSQL', 'MongoDB', 'Firebase', 'Socket.io', 'WebSockets'] },
-        { n: 'Tools & Design', i: 'palette', l: ['Git & GitHub', 'Figma', 'Photoshop', 'Illustrator', 'React Native'] },
-      ],
-      certsTitle: 'Professional Certifications',
-      certs: [
-        { t: 'Programming Foundations with JS, HTML, CSS', i: 'Duke University (With Honors)', d: 'Sept 2022' },
-        { t: 'Responsive Web Design', i: 'University of London', d: 'Sept 2022' },
-        { t: 'JavaScript Application Development', i: 'Hsoub Academy', d: 'Jan 2024' },
-        { t: 'TCF (C1 Level)', i: 'France Éducation international', d: 'Dec 2024' },
-      ],
+        title: 'Technical Stack', subtitle: 'Skills & Certifications',
+        cats: [
+            { n: 'Front-End & Mobile', i: 'code', l: ['React.js', 'Next.js', 'React Native', 'TypeScript', 'Redux', 'Tailwind CSS', 'Bootstrap / SASS', 'HTML5 / CSS3'] },
+            { n: 'Back-End & APIs', i: 'server', l: ['Node.js', 'Express.js', 'REST APIs', 'JWT Auth'] },
+            { n: 'Data & Databases', i: 'database', l: ['PostgreSQL', 'SQL / Sequelize', 'MongoDB', 'NoSQL', 'Firebase', 'Socket.io'] },
+            { n: 'CMS, Tools & Design', i: 'palette', l: ['WordPress / PrestaShop', 'Git & GitHub', 'Figma', 'Photoshop', 'Illustrator'] },
+        ],
+        certsTitle: 'Professional Certifications',
+        certs: [
+            { t: 'Programming Foundations with JS, HTML, CSS', i: 'Duke University (With Honors)', d: 'Sept 2022' },
+            { t: 'Responsive Web Design', i: 'University of London', d: 'Sept 2022' },
+            { t: 'JavaScript Application Development', i: 'Hsoub Academy', d: 'Jan 2024' },
+            { t: 'TCF (C1 Level)', i: 'France Éducation international', d: 'Dec 2024' },
+        ],
     },
     contact: {
       title: "Let's Build Something", subtitle: 'Get in Touch',
@@ -262,8 +262,8 @@ export const i18n: Record<Lang, Translation> = {
     exp: {
       title: 'Parcours Professionnel', subtitle: 'Expériences en Entreprise & Freelance',
       items: [
-        { role: 'Ingénieur Systèmes et Réseaux', comp: 'Infrastructure Technologique Majeure', date: '2024 - Présent', desc: "Gestion, sécurisation et optimisation de l'infrastructure IT et de l'architecture réseau pour une grande entreprise nationale.", tags: ['Admin Systèmes', 'Réseaux', 'Infra IT', 'Sécurité'] },
-        { role: 'Frontend / Fullstack Web Developer & Designer', comp: 'Koudri Innovations Group (KIG)', date: 'Juin 2024 - Présent', desc: 'Développement de plateformes web interactives, conception de Design Systems UI/UX, création de visuels de marque et fonctionnalités fullstack.', tags: ['React', 'TypeScript', 'Node.js', 'UI/UX'] },
+        { role: 'Ingénieur Systèmes et Réseaux', comp: 'Infrastructure Technologique Majeure', date: 'Septembre 2025 - Présent', desc: "Gestion, sécurisation et optimisation de l'infrastructure IT et de l'architecture réseau pour une grande entreprise nationale.", tags: ['Admin Systèmes', 'Réseaux', 'Infra IT', 'Sécurité'] },
+        { role: 'Frontend / Fullstack Web Developer & Designer (Temps Partiel)', comp: 'Koudri Innovations Group (KIG)', date: 'Juin 2024 - Présent', desc: 'Développement à temps partiel de plateformes web interactives, conception de Design Systems UI/UX, création de visuels de marque et fonctionnalités fullstack.', tags: ['React', 'TypeScript', 'Node.js', 'UI/UX'] },
         { role: 'Développeur Fullstack & Graphic Designer Freelance', comp: 'Mostaql & Clients Indépendants', date: '2022 - Présent', desc: 'Réalisation complète de projets clients : apps web/mobile, campagnes visuelles réseaux sociaux et identités visuelles sur-mesure.', tags: ['React Native', 'Figma', 'Express', 'MongoDB'] },
         { role: 'Contributeur Dev Web (Image Time App)', comp: 'Hsoub Academy', date: 'Nov 2023 - Déc 2023', desc: "Conception et implémentation de fonctionnalités pour le traitement d'images et la gestion d'applications web réactives.", tags: ['React.js', 'Node.js', 'REST APIs'] },
       ],
@@ -272,7 +272,7 @@ export const i18n: Record<Lang, Translation> = {
       title: 'Recherche & Académique', subtitle: 'Doctorat & Parcours Universitaire',
       phdTitle: 'Doctorant en Intelligence Artificielle',
       phdMeta: 'Département Génie Logiciel | Admis sur concours',
-      phdDesc: "Recherche axée sur l'aide à la décision par l'IA et l'analyse des modèles d'engagement étudiant pour optimiser la réussite en première année universitaire.",
+      phdDesc: "Explorer la synergie entre intelligence artificielle et prise de décision critique à travers des architectures logicielles et algorithmiques avancées.",
       deg: [
         { t: 'Master - Ingénierie des SI Avancés', i: 'Univ. Hassiba Ben Bouali', d: 'Juin 2023', h: 'Obtenu avec mention' },
         { t: 'Licence - Systèmes Informatiques', i: 'Univ. Hassiba Ben Bouali', d: 'Sept 2021' },
@@ -305,20 +305,20 @@ export const i18n: Record<Lang, Translation> = {
       ],
     },
     skills: {
-      title: 'Stack Technique', subtitle: 'Compétences & Certifications',
-      cats: [
-        { n: 'Front-End', i: 'code', l: ['React.js', 'TypeScript', 'HTML5', 'CSS3', 'Tailwind CSS'] },
-        { n: 'Back-End', i: 'server', l: ['Node.js', 'Express.js', 'REST APIs', 'JWT Auth'] },
-        { n: 'Données & Temps Réel', i: 'database', l: ['PostgreSQL', 'MongoDB', 'Firebase', 'Socket.io', 'WebSockets'] },
-        { n: 'Outils & Design', i: 'palette', l: ['Git & GitHub', 'Figma', 'Photoshop', 'Illustrator', 'React Native'] },
-      ],
-      certsTitle: 'Certifications Professionnelles',
-      certs: [
-        { t: 'Programming Foundations with JS, HTML, CSS', i: 'Duke University (Avec Mention)', d: 'Sept 2022' },
-        { t: 'Responsive Web Design', i: 'University of London', d: 'Sept 2022' },
-        { t: 'JavaScript Application Development', i: 'Hsoub Academy', d: 'Jan 2024' },
-        { t: 'TCF (Niveau C1)', i: 'France Éducation international', d: 'Déc 2024' },
-      ],
+        title: 'Stack Technique', subtitle: 'Compétences & Certifications',
+        cats: [
+            { n: 'Front-End & Mobile', i: 'code', l: ['React.js', 'Next.js', 'React Native', 'TypeScript', 'Redux', 'Tailwind CSS', 'Bootstrap / SASS', 'HTML5 / CSS3'] },
+            { n: 'Back-End & APIs', i: 'server', l: ['Node.js', 'Express.js', 'API REST', 'JWT Auth'] },
+            { n: 'Données & Bases de données', i: 'database', l: ['PostgreSQL', 'SQL / Sequelize', 'MongoDB', 'NoSQL', 'Firebase', 'Socket.io'] },
+            { n: 'CMS, Outils & Design', i: 'palette', l: ['WordPress / PrestaShop', 'Git & GitHub', 'Figma', 'Photoshop', 'Illustrator'] },
+        ],
+        certsTitle: 'Certifications Professionnelles',
+        certs: [
+            { t: 'Programming Foundations with JS, HTML, CSS', i: 'Duke University (Avec Mention)', d: 'Sept 2022' },
+            { t: 'Responsive Web Design', i: 'University of London', d: 'Sept 2022' },
+            { t: 'JavaScript Application Development', i: 'Hsoub Academy', d: 'Jan 2024' },
+            { t: 'TCF (Niveau C1)', i: 'France Éducation international', d: 'Déc 2024' },
+        ],
     },
     contact: {
       title: 'Construisons Ensemble', subtitle: 'Me Contacter',
@@ -353,8 +353,8 @@ export const i18n: Record<Lang, Translation> = {
     exp: {
       title: 'الخبرة المهنية', subtitle: 'العمل في الشركات والعمل الحر',
       items: [
-        { role: 'مهندس أنظمة وشبكات', comp: 'بنية تحتية تكنولوجية كبرى (مؤسسة وطنية)', date: '2024 - الحالي', desc: 'إدارة وتأمين وتحسين البنية التحتية لتكنولوجيا المعلومات والشبكات لمؤسسة وطنية كبرى.', tags: ['إدارة الأنظمة', 'شبكات', 'بنية تحتية', 'أمن معلومات'] },
-        { role: 'مطور ومصمم Fullstack / Frontend', comp: 'Koudri Innovations Group (KIG)', date: 'يونيو 2024 - الحالي', desc: 'تطوير منصات ويب تفاعلية، تصميم أنظمة UI/UX، إنشاء الهويات البصرية والميزات البرمجية المتكاملة.', tags: ['React', 'TypeScript', 'Node.js', 'UI/UX'] },
+        { role: 'مهندس أنظمة وشبكات', comp: 'بنية تحتية تكنولوجية كبرى (مؤسسة وطنية)', date: 'سبتمبر 2025 - الحالي', desc: 'إدارة وتأمين وتحسين البنية التحتية لتكنولوجيا المعلومات والشبكات لمؤسسة وطنية كبرى.', tags: ['إدارة الأنظمة', 'شبكات', 'بنية تحتية', 'أمن معلومات'] },
+        { role: 'مطور ومصمم Fullstack / Frontend (دوام جزئي)', comp: 'Koudri Innovations Group (KIG)', date: 'يونيو 2024 - الحالي', desc: 'تطوير منصات ويب تفاعلية، تصميم أنظمة UI/UX، إنشاء الهويات البصرية والميزات البرمجية المتكاملة بدوام جزئي.', tags: ['React', 'TypeScript', 'Node.js', 'UI/UX'] },
         { role: 'مطور Fullstack ومصمم جرافيك مستقل', comp: 'مستقل وعملاء مستقلون', date: '2022 - الحالي', desc: 'تنفيذ مشاريع متكاملة للعملاء: تطبيقات ويب، واجهات موبايل، وحملات بصرية.', tags: ['React Native', 'Figma', 'Express', 'MongoDB'] },
         { role: 'مطور مشارك (تطبيق Image Time)', comp: 'مشروع أكاديمية حسوب', date: 'نوفمبر 2023 - ديسمبر 2023', desc: 'بناء ميزات تفاعلية لمعالجة الصور وإدارة تطبيقات الويب.', tags: ['React.js', 'Node.js', 'REST APIs'] },
       ],
@@ -363,7 +363,7 @@ export const i18n: Record<Lang, Translation> = {
       title: 'البحث الأكاديمي', subtitle: 'الدكتوراه والمسار الجامعي',
       phdTitle: 'طالب دكتوراه في الذكاء الاصطناعي',
       phdMeta: 'قسم هندسة البرمجيات | مقبول عبر المسابقة الوطنية',
-      phdDesc: 'أبحاث تركز على دعم اتخاذ القرار باستخدام الذكاء الاصطناعي وتحليل أنماط تفاعل الطلاب لتحسين معدلات النجاح في السنة الجامعية الأولى.',
+      phdDesc: 'استكشاف التآزر بين الذكاء الاصطناعي واتخاذ القرارات الحرجة من خلال البرمجيات المتقدمة والهندسة الخوارزمية.',
       deg: [
         { t: 'ماجستير - هندسة أنظمة المعلومات المتقدمة', i: 'جامعة حسيبة بن بوعلي', d: 'يونيو 2023', h: 'متخرج بتقدير ممتاز' },
         { t: 'ليسانس - الأنظمة المعلوماتية', i: 'جامعة حسيبة بن بوعلي', d: 'سبتمبر 2021' },
@@ -396,20 +396,20 @@ export const i18n: Record<Lang, Translation> = {
       ],
     },
     skills: {
-      title: 'التقنيات والأدوات', subtitle: 'المهارات والشهادات',
-      cats: [
-        { n: 'Front-End', i: 'code', l: ['React.js', 'TypeScript', 'HTML5', 'CSS3', 'Tailwind CSS'] },
-        { n: 'Back-End', i: 'server', l: ['Node.js', 'Express.js', 'REST APIs', 'JWT Auth'] },
-        { n: 'قواعد البيانات والوقت الفعلي', i: 'database', l: ['PostgreSQL', 'MongoDB', 'Firebase', 'Socket.io', 'WebSockets'] },
-        { n: 'أدوات وتصميم', i: 'palette', l: ['Git & GitHub', 'Figma', 'Photoshop', 'Illustrator', 'React Native'] },
-      ],
-      certsTitle: 'الشهادات المهنية',
-      certs: [
-        { t: 'أساسيات البرمجة باستخدام JS, HTML, CSS', i: 'جامعة ديوك (مع مرتبة الشرف)', d: 'سبتمبر 2022' },
-        { t: 'تصميم الويب المتجاوب', i: 'جامعة لندن', d: 'سبتمبر 2022' },
-        { t: 'تطوير التطبيقات باستخدام JavaScript', i: 'أكاديمية حسوب', d: 'يناير 2024' },
-        { t: 'TCF (مستوى C1)', i: 'France Éducation international', d: 'ديسمبر 2024' },
-      ],
+        title: 'التقنيات والأدوات', subtitle: 'المهارات والشهادات',
+        cats: [
+            { n: 'الواجهات الأمامية والموبايل', i: 'code', l: ['React.js', 'Next.js', 'React Native', 'TypeScript', 'Redux', 'Tailwind CSS', 'Bootstrap / SASS', 'HTML5 / CSS3'] },
+            { n: 'Back-End & APIs', i: 'server', l: ['Node.js', 'Express.js', 'REST APIs', 'JWT Auth'] },
+            { n: 'قواعد البيانات والبيانات', i: 'database', l: ['PostgreSQL', 'SQL / Sequelize', 'MongoDB', 'NoSQL', 'Firebase', 'Socket.io'] },
+            { n: 'أنظمة إدارة المحتوى والأدوات', i: 'palette', l: ['WordPress / PrestaShop', 'Git & GitHub', 'Figma', 'Photoshop', 'Illustrator'] },
+        ],
+        certsTitle: 'الشهادات المهنية',
+        certs: [
+            { t: 'أساسيات البرمجة باستخدام JS, HTML, CSS', i: 'جامعة ديوك (مع مرتبة الشرف)', d: 'سبتمبر 2022' },
+            { t: 'تصميم الويب المتجاوب', i: 'جامعة لندن', d: 'سبتمبر 2022' },
+            { t: 'تطوير التطبيقات باستخدام JavaScript', i: 'أكاديمية حسوب', d: 'يناير 2024' },
+            { t: 'TCF (مستوى C1)', i: 'France Éducation international', d: 'ديسمبر 2024' },
+        ],
     },
     contact: {
       title: 'لنبنِ شيئاً معاً', subtitle: 'تواصل معي',
