@@ -16,6 +16,11 @@ interface Hero {
   badge: string;
   greeting: string;
   name: string;
+  mainTitle: string;
+  titlePart1: string;
+  titlePart2: string;
+  titlePart3: string;
+  titlePart4: string;
   title: string;
   desc: string;
   cta1: string;
@@ -145,7 +150,7 @@ export const i18n: Record<Lang, Translation> = {
   en: {
     dir: 'ltr',
     nav: { about: 'About', exp: 'Experience', research: 'Research', dev: 'Dev', design: 'Design', skills: 'Skills', contact: 'Contact', cv: 'Download CV' },
-    hero: { badge: 'PhD Researcher in Artificial Intelligence', greeting: "Hello, I'm", name: 'Nassim', title: 'Systems & Networks Engineer, Fullstack Developer & Graphic Designer', desc: 'Engineered at the intersection of critical IT infrastructure, cutting-edge AI research, and elite UI/UX design. Delivering high-performance digital experiences.', cta1: 'Explore Projects', cta2: 'Get in Touch' },
+    hero: { badge: 'PhD Researcher in Artificial Intelligence', greeting: "Hello, I'm", name: 'Nassim', titlePart1: "Full-Stack", titlePart2: "Developer", titlePart3: "Graphic", titlePart4: "Designer", mainTitle: "Full-Stack Developer & Graphic Designer", title: 'Advanced Systems Engineer & Software Architect', desc: 'Bridging complex information systems, modern full-stack development, and elite UI/UX graphic design to craft intelligent digital experiences.', cta1: 'Explore Projects', cta2: 'Get in Touch' },
     stats: { exp: 'Years Experience', proj: 'Projects Delivered', tech: 'Mastered Techs', qual: 'Core Domains' },
     about: {
       title: 'Profile & Vision', subtitle: 'The Quadruple Threat',
@@ -236,7 +241,7 @@ export const i18n: Record<Lang, Translation> = {
   fr: {
     dir: 'ltr',
     nav: { about: 'À Propos', exp: 'Expérience', research: 'Recherche', dev: 'Dev', design: 'Design', skills: 'Compétences', contact: 'Contact', cv: 'Télécharger CV' },
-    hero: { badge: 'Chercheur Doctorant en Intelligence Artificielle', greeting: 'Bonjour, je suis', name: 'Nassim', title: 'Ingénieur Systèmes & Réseaux, Développeur Fullstack & Lead Designer', desc: "À la croisée de l'infrastructure IT critique, de la recherche en IA et du design UI/UX d'élite. Concepteur d'expériences numériques d'impact.", cta1: 'Explorer les projets', cta2: 'Me contacter' },
+    hero: { badge: 'Chercheur Doctorant en Intelligence Artificielle', greeting: 'Bonjour, je suis', name: 'Nassim', titlePart1: "Développeur", titlePart2: "Full-Stack", titlePart3: "Designer", titlePart4: "Graphique", mainTitle: "Développeur Full-Stack & Designer Graphique", title: 'Ingénieur Systèmes Avancés & Architecte Logiciel', desc: "À la croisée des systèmes d'information complexes, du développement full-stack moderne et du design graphique UI/UX pour façonner des expériences numériques intelligentes.", cta1: 'Explorer les projets', cta2: 'Me contacter' },
     stats: { exp: "Années d'expérience", proj: 'Projets réalisés', tech: 'Technologies maîtrisées', qual: "Domaines d'Expertise" },
     about: {
       title: 'Profil & Vision', subtitle: 'La Quadruple Casquette',
@@ -327,7 +332,7 @@ export const i18n: Record<Lang, Translation> = {
   ar: {
     dir: 'rtl',
     nav: { about: 'نبذة عني', exp: 'الخبرة', research: 'البحث العلمي', dev: 'تطوير', design: 'تصميم', skills: 'المهارات', contact: 'اتصل بي', cv: 'تحميل السيرة' },
-    hero: { badge: 'باحث دكتوراه في الذكاء الاصطناعي', greeting: 'مرحباً، أنا', name: 'نسيم', title: 'مهندس أنظمة وشبكات، مطور Fullstack ومصمم جرافيك رئيسي', desc: 'أجمع بين هندسة البنى التحتية الحساسة، أبحاث الذكاء الاصطناعي المتقدمة، وتصميم تجربة المستخدم النخبوية.', cta1: 'استكشف المشاريع', cta2: 'تواصل معي' },
+    hero: { badge: 'باحث دكتوراه في الذكاء الاصطناعي', greeting: 'مرحباً، أنا', name: 'نسيم', titlePart1: "مطور", titlePart2: "Full-Stack", titlePart3: "ومصمم", titlePart4: "جرافيك", mainTitle: "مطور Full-Stack ومصمم جرافيك", title: "مهندس نظم متقدمة ومهندس برمجيات", desc: "يمزج بين هندسة النظم المعقدة، التطوير الشامل الحديث، والتصميم الجرافيكي وتجربة المستخدم المتقدمة لبناء تجارب رقمية ذكية.", cta1: 'استكشف المشاريع', cta2: 'تواصل معي' },
     stats: { exp: 'سنوات خبرة', proj: 'مشروعاً منجزاً', tech: 'تقنية متقنة', qual: 'مجالات تخصص' },
     about: {
       title: 'الملف الشخصي والرؤية', subtitle: 'الخبرة الرباعية المتكاملة',
