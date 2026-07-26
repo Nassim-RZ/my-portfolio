@@ -129,16 +129,17 @@ export default function App() {
         <section className="min-h-[90vh] flex items-center justify-center px-4">
           <div className="max-w-4xl mx-auto text-center space-y-8">
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-100 dark:bg-blue-500/10 border border-blue-200 dark:border-blue-500/20 text-blue-700 dark:text-blue-400 text-sm font-medium">
-              <Sparkles size={16} />
+              <GraduationCap size={16} />
               <span>{t.hero.badge}</span>
             </motion.div>
 
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="space-y-4">
-              <p className="text-xl text-slate-600 dark:text-slate-400">{t.hero.greeting} <span className="text-slate-900 dark:text-white font-bold">{t.hero.name}</span></p>
+              <p className="text-xl text-slate-600 dark:text-slate-400">
+                {t.hero.greeting} <span className="text-slate-900 dark:text-white font-bold">{t.hero.name}</span>
+              </p>
               <h1 className="text-5xl md:text-7xl font-black tracking-tight leading-tight text-slate-900 dark:text-white">
-                Architecting <span className="text-blue-600 dark:text-blue-400">Systems</span>,<br />
-                Engineering <span className="text-cyan-600 dark:text-cyan-400">AI</span> &<br />
-                Crafting <span className="text-slate-600 dark:text-slate-400">Visuals</span>.
+                <span className="text-blue-600 dark:text-blue-400">{t.hero.titlePart1}</span> {t.hero.titlePart2} &<br />
+                {t.hero.titlePart3} <span className="text-cyan-600 dark:text-cyan-400">{t.hero.titlePart4}</span>.
               </h1>
               <p className="text-lg md:text-xl font-medium text-slate-700 dark:text-slate-300 pt-4">{t.hero.title}</p>
             </motion.div>
