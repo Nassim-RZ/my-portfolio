@@ -4,7 +4,7 @@ import {
   Menu, X, Download, ChevronRight, Github, Linkedin, Mail,
   Phone, MapPin, ExternalLink, Code2, Palette, Database,
   Cpu, Briefcase, GraduationCap, Award, Globe,
-  Send, Sparkles, Sun, Moon, Server, CheckCircle2,
+  Send, Sparkles, Sun, Moon, Server, CheckCircle2, Play, // <-- Ajout de Play
 } from 'lucide-react';
 import { i18n, type Lang } from '@/i18n';
 
@@ -17,12 +17,63 @@ const iconMap: Record<string, ReactNode> = {
 
 const flags: Record<Lang, string> = { en: '🇬🇧', fr: '🇫🇷', ar: '🇩🇿' };
 
+// Les 4 projets spécifiques avec la structure pour la vidéo et la modale
+const navProjects = [
+  {
+    id: 'nav-market',
+    title: 'Nav Market',
+    category: 'E-Commerce',
+    color: 'from-orange-500 to-amber-500', // Pour le glow arrière
+    themeColor: '#f97316', // Pour la bordure de la modale
+    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+    shortDesc: 'Application e-commerce complète pour la gestion des commandes.',
+    longDescription: "Nav Market est une application révolutionnaire conçue pour redéfinir l'expérience e-commerce.\n\nL'application permet aux administrateurs de gérer les commandes, suivre les livraisons et analyser les statistiques en temps réel. Elle intègre des notifications push fluides, un système de paiement sécurisé, et un tableau de bord analytique avancé pour surveiller la croissance.\n\nIdéal pour les entreprises cherchant à digitaliser leur processus de vente rapidement.",
+    tech: ['React Native', 'Node.js', 'MongoDB', 'Redux']
+  },
+  {
+    id: 'nav-food',
+    title: 'Nav Food',
+    category: 'Food Delivery',
+    color: 'from-red-500 to-rose-500',
+    themeColor: '#ef4444',
+    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+    shortDesc: 'Plateforme de livraison de repas rapide et intuitive.',
+    longDescription: "Une application de livraison de repas rapide et efficace reliant les utilisateurs affamés à leurs restaurants préférés.\n\nDes dizaines de restaurants partenaires sont intégrés. L'application propose un suivi GPS en temps réel du livreur, une gestion des favoris, et un système d'évaluation post-commande pour garantir la qualité du service.",
+    tech: ['React Native', 'Firebase', 'Google Maps API']
+  },
+  {
+    id: 'nav-restaurant',
+    title: 'Nav Restaurant',
+    category: 'Management',
+    color: 'from-yellow-400 to-amber-500',
+    themeColor: '#eab308',
+    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+    shortDesc: 'Interface de gestion centralisée pour les restaurateurs.',
+    longDescription: "La tour de contrôle pour les gérants de restaurants.\n\nCette solution SaaS permet d'accepter les commandes entrantes (depuis Nav Food), de gérer les menus dynamiquement, d'attribuer des rôles au personnel et de surveiller les stocks. L'interface est pensée pour être utilisée sur tablette directement en cuisine ou en salle.",
+    tech: ['React', 'Express', 'PostgreSQL', 'Tailwind']
+  },
+  {
+    id: 'nav-delivery',
+    title: 'Nav Delivery',
+    category: 'Logistics',
+    color: 'from-blue-500 to-cyan-500',
+    themeColor: '#3b82f6',
+    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+    shortDesc: 'Outil logistique dédié aux livreurs pour optimiser les tournées.',
+    longDescription: "L'application compagnon incontournable pour les coursiers.\n\nNav Delivery optimise les trajets grâce à un algorithme de routage intelligent. Les livreurs peuvent accepter des courses, communiquer avec les clients et les restaurants, et suivre leurs gains journaliers directement depuis leur portefeuille numérique intégré.",
+    tech: ['React Native', 'Socket.io', 'NestJS']
+  }
+];
+
 export default function App() {
   const [lang, setLang] = useState<Lang>('en');
   const [theme, setTheme] = useState<'light' | 'dark'>('light');
   const [menuOpen, setMenuOpen] = useState(false);
   const [filter, setFilter] = useState('all');
   const [sent, setSent] = useState(false);
+  
+  // Nouvel état pour gérer la modale vidéo
+  const [selectedVideoProj, setSelectedVideoProj] = useState<typeof navProjects[0] | null>(null);
 
   const t = i18n[lang];
   const isRtl = t.dir === 'rtl';
@@ -286,36 +337,48 @@ export default function App() {
           </div>
         </section>
 
-        {/* DEV PROJECTS */}
+        {/* DEV PROJECTS (Modifié pour la vidéo et l'interaction Hover) */}
         <section id="dev" className="py-24 px-4 bg-slate-100/50 dark:bg-white/[0.02] border-y border-slate-200 dark:border-white/5">
           <div className="max-w-7xl mx-auto space-y-16">
             <div className="text-center space-y-4">
-              <h2 className="text-blue-600 dark:text-blue-400 font-bold tracking-widest uppercase text-sm">{t.dev.title}</h2>
-              <h3 className="text-3xl md:text-5xl font-black text-slate-900 dark:text-white">{t.dev.subtitle}</h3>
+              <h2 className="text-blue-600 dark:text-blue-400 font-bold tracking-widest uppercase text-sm">PROJETS VEDETTES</h2>
+              <h3 className="text-3xl md:text-5xl font-black text-slate-900 dark:text-white">Nav Ecosystem</h3>
+              <p className="max-w-2xl mx-auto text-slate-600 dark:text-slate-400">Clique sur un projet pour voir la vidéo de démonstration.</p>
             </div>
 
             <div className="grid md:grid-cols-2 gap-8">
-              {t.dev.items.map((proj, i) => (
-                <motion.div key={i} whileHover={{ y: -5 }} className="group relative p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/5 hover:border-blue-400/50 dark:hover:border-blue-500/30 overflow-hidden flex flex-col justify-between space-y-6 shadow-sm hover:shadow-lg transition-all">
-                  <div className={`absolute top-0 right-0 w-64 h-64 bg-gradient-to-br ${proj.color} blur-3xl pointer-events-none rounded-full transform translate-x-1/2 -translate-y-1/2 opacity-50 dark:opacity-100`} />
+              {navProjects.map((proj) => (
+                <motion.div 
+                  key={proj.id} 
+                  whileHover={{ y: -5 }} 
+                  onClick={() => setSelectedVideoProj(proj)}
+                  className="group relative p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/5 hover:border-slate-300 dark:hover:border-white/10 overflow-hidden flex flex-col justify-between space-y-6 shadow-sm hover:shadow-2xl transition-all cursor-pointer"
+                >
+                  {/* Glow en arrière-plan */}
+                  <div className={`absolute top-0 right-0 w-72 h-72 bg-gradient-to-br ${proj.color} blur-3xl pointer-events-none rounded-full transform translate-x-1/2 -translate-y-1/2 opacity-20 group-hover:opacity-40 transition-opacity duration-300`} />
+                  
+                  {/* Overlay Noir & Icône Play au Hover */}
+                  <div className="absolute inset-0 bg-slate-900/40 dark:bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20 flex items-center justify-center backdrop-blur-[2px]">
+                    <div className="w-16 h-16 rounded-full bg-white/20 flex items-center justify-center backdrop-blur-md border border-white/30 text-white shadow-xl transform scale-75 group-hover:scale-100 transition-transform duration-300">
+                      <Play className="ml-1" size={32} fill="currentColor" />
+                    </div>
+                  </div>
+
+                  {/* Contenu normal de la carte */}
                   <div className="relative z-10 space-y-4">
                     <div className="flex items-center justify-between">
-                      <span className="text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-slate-300">{proj.c}</span>
-                      <Code2 className="text-blue-600 dark:text-blue-400" size={20} />
+                      <span className="text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-slate-300">{proj.category}</span>
+                      <Code2 className="text-slate-400 group-hover:text-white transition-colors relative z-30" size={20} />
                     </div>
-                    <h4 className="text-2xl font-black text-slate-900 dark:text-white">{proj.t}</h4>
-                    <p className="text-slate-600 dark:text-slate-400 leading-relaxed">{proj.d}</p>
+                    <h4 className="text-3xl font-black text-slate-900 dark:text-white">{proj.title}</h4>
+                    <p className="text-slate-600 dark:text-slate-400 leading-relaxed">{proj.shortDesc}</p>
                   </div>
+
                   <div className="relative z-10 space-y-6">
                     <div className="flex flex-wrap gap-2">
                       {proj.tech.map((tech) => (
-                        <span key={tech} className={`px-2.5 py-1 rounded-lg bg-slate-50 dark:bg-slate-950 border ${proj.border} text-slate-700 dark:text-slate-300 text-xs font-mono`}>{tech}</span>
+                        <span key={tech} className="px-2.5 py-1 rounded-lg bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-white/5 text-slate-700 dark:text-slate-300 text-xs font-mono">{tech}</span>
                       ))}
-                    </div>
-                    <div className="pt-4 border-t border-slate-200 dark:border-white/5 flex gap-4">
-                      <a href="#contact" className="flex items-center gap-2 text-sm font-bold text-slate-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-                        <span>{t.dev.view}</span> <ExternalLink size={16} />
-                      </a>
                     </div>
                   </div>
                 </motion.div>
@@ -505,6 +568,71 @@ export default function App() {
         <p>© {new Date().getFullYear()} Belkacem Nassim REZZOUK. All rights reserved.</p>
         <p className="mt-1">{t.footer}</p>
       </footer>
+
+      {/* LA MODALE VIDÉO (SPLIT-VIEW) */}
+      <AnimatePresence>
+        {selectedVideoProj && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6 bg-slate-900/80 dark:bg-black/80 backdrop-blur-sm"
+            onClick={() => setSelectedVideoProj(null)}
+          >
+            <motion.div
+              initial={{ scale: 0.95, opacity: 0, y: 20 }}
+              animate={{ scale: 1, opacity: 1, y: 0 }}
+              exit={{ scale: 0.95, opacity: 0, y: 20 }}
+              onClick={(e) => e.stopPropagation()}
+              className="bg-white dark:bg-slate-900 rounded-2xl w-full max-w-4xl max-h-[90vh] flex flex-col overflow-hidden relative shadow-2xl"
+              style={{ borderTop: `4px solid ${selectedVideoProj.themeColor}` }}
+            >
+              {/* Bouton Fermer */}
+              <button
+                onClick={() => setSelectedVideoProj(null)}
+                className="absolute top-4 right-4 z-10 p-2 rounded-full bg-black/50 hover:bg-black/70 text-white transition-colors"
+              >
+                <X size={20} />
+              </button>
+
+              {/* Zone Vidéo (Fixe en haut, responsive aspect ratio) */}
+              <div className="w-full aspect-video bg-black relative shrink-0">
+                <iframe
+                  src={`${selectedVideoProj.videoUrl}?autoplay=1&mute=1`}
+                  title={selectedVideoProj.title}
+                  className="w-full h-full absolute inset-0"
+                  allow="autoplay; encrypted-media"
+                  allowFullScreen
+                />
+              </div>
+
+              {/* Zone Texte (Scrollable en bas) */}
+              <div className="p-6 sm:p-8 overflow-y-auto custom-scrollbar flex-1">
+                <div className="flex items-center gap-3 mb-4">
+                  <h3 className="text-2xl font-black text-slate-900 dark:text-white" style={{ color: selectedVideoProj.themeColor }}>
+                    {selectedVideoProj.title}
+                  </h3>
+                  <span className="px-3 py-1 rounded-full bg-slate-100 dark:bg-white/5 text-xs font-bold text-slate-600 dark:text-slate-300">
+                    {selectedVideoProj.category}
+                  </span>
+                </div>
+
+                <p className="text-slate-600 dark:text-slate-400 whitespace-pre-line leading-relaxed mb-6">
+                  {selectedVideoProj.longDescription}
+                </p>
+
+                <div className="flex flex-wrap gap-2 pt-4 border-t border-slate-200 dark:border-white/10">
+                  {selectedVideoProj.tech.map((t: string) => (
+                    <span key={t} className="px-3 py-1.5 rounded-lg bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-white/5 text-slate-700 dark:text-slate-300 text-xs font-mono">
+                      {t}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
